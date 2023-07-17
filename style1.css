@@ -1,0 +1,256 @@
+/*.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #F2F2F2;
+    font-size: 24px;
+    font-family: 'Inter';
+    display: flex;
+}*/
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-group {
+    margin-bottom: 10px;
+    size: 40px;
+    color: #0A2038;
+}
+
+.result {
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-size: 24px;
+    color: #0A2038;
+}
+
+.project {
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Inter';
+    font-size: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: stretch;
+}
+
+h1 {
+    font-family: 'Inter';
+    font-size: 40px;
+    color: #0A2038;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Inter';
+    font-size: 24px;
+    color: #0A2038;
+}
+
+h3 {
+    font-family: 'Inter';
+    font-size: 34px;
+    color: #0A2038;
+    text-align: center;
+}
+#option0 {
+    border: solid 1px #0A2038;
+    border-radius: 8px;
+    height: 7px;
+    width: 356px;
+    outline: #0A2038;
+    outline-width: 2px;
+    accent-color: #0A2038;
+  }
+  #option1, #option2, #option3, #option4, #option5, #option6, #option7, #option8, #option9, #option10, #option11, #option12, #option13, #option14, #option15, #option16, #option17, #option18, #option19, #option20 {
+    border: solid 1px #0A2038;
+    border-radius: 8px;
+    height: auto;
+    width: auto;
+    outline: #0A2038;
+    font-family: 'Inter';
+    font-size: 24px;
+    color: #0A2038;
+  }
+
+/* --------- Tooltip Styles ---------- */
+
+.tooltip{
+    position: relative;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 12px;
+    border-radius: 100%;
+    font-size: 20px;
+    cursor: help;
+    }
+    .tooltip::before, .tooltip::after{
+    position: absolute;
+    left: 100%;
+    opacity: 0;
+    transition: allease0.3s;
+    }
+    .tooltip::before{
+    content: "";
+    border-width: 10px 8px 08px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.3) transparent transparent transparent;
+    top: -20px;
+    margin-left: -8px;
+    visibility: hidden;
+    }
+    .tooltip::after{
+    content: attr(data-tooltip);
+    background: rgba(0,0,0,0.3);
+    top: 25px;
+    transform: translateY(-100%);
+    font-size: 14px;
+    margin-left: 50px;
+    width: 300px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 14px;
+    }
+    
+    /* Hover states */
+    
+    .tooltip:hover::before, .tooltip:hover::after{
+    opacity: 1;
+    }
+
+
+        /* Style for tabs */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            font-family: 'Inter';
+            font-size: 24px;
+            color: #0A2038;
+        }
+
+        /* Style for tab links */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-family: 'Inter';
+            font-size: 24px;
+            color: #0A2038;
+        }
+
+        /* Style for active tab link */
+        .tab button.active {
+            background-color: #187dbc;
+        }
+
+        /* Style for tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+            font-family: 'Inter';
+            font-size: 24px;
+            color: #0A2038;
+        }
+
+        .left-container {
+            width: 65%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #6db0d9;
+    
+            
+        }
+
+        .right-container {
+            width: 33%;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ccc;
+            margin-left: 2%; 
+            
+        }
+
+
+/* Style for left container */
+/*.left-container {
+    width: 50%;
+    background-color: #6db0d9;
+    padding: 20px;
+    margin-right: 10px; 
+    font-family: 'Inter';
+    box-sizing: border-box;
+    
+}*/
+
+/* Style for right container */
+/*.right-container {
+    width: 50%;
+    background-color: #ccc;
+    padding: 20px;
+    margin-left: 10px;
+    font-family: 'Inter';
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+/* Style for bottom container */
+.bottom-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #0A2038;
+    border-top: 20px;
+    font-family: 'Inter';
+    font-size: 24px;
+    color: #ffffff;
+    margin-top: 2%
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+
+
+
+
+
+
+    /* Style for the button */
+    .calculate-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-family: 'Inter';
+    }
+
+    /* Hover effect */
+    .calculate-button:hover {
+        background-color: #45a049;
+    }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style1.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+        <h1>Managed Solutions</h1>
+        <h3>Managed Infrastructure Calculator</h3>
+    <div class="container">
+
+        <div class="left-container">
+            <h2>Environment Configurator</h2>
+        <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Tab1')">Compute</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab2')">Databases</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab3')">Networking</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab4')">Storage</button>
+        <button class="tablinks" onclick="openTab(event, 'Tab5')">Other</button>
+    </div>
+
+    <div id="Tab1" class="tabcontent">
+        <h3>Define your Desired Environment</h3>
+        <div class="form-group">
+               <label for="option0">No. of Environmnets:</label>             
+               <span class="tooltip" data-tooltip="the number of environments will affect the total number of resources selected below">?</span>
+   
+               <br>
+               <input type="range" id="option0" min="1" max="5" value="1" oninput="updateSliderValue()">
+               <span id="sliderValue">1</span>
+           </div>
+        <div class="form-group">
+            <label for="option1">No. of Kubernetes Clusters:</label>
+            <select id="option1">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option2">Custom Workloads:</label>
+            <select id="option2">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option3">Workloads to be containerised and Deployed:</label>
+            <select id="option3">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option4">Virtual Machines:</label>
+            <select id="option4">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="Tab2" class="tabcontent">
+        <h3>Define your Database Requirements</h3>
+        <div class="form-group">
+            <label for="option5">No. Relational Databases (CloudSQL):</label>
+            <select id="option5">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option6">No. of NoSQL Databases (Datastore):</label>
+            <select id="option6">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option7">No. of Redis Caches (Memory Store):</label>
+            <select id="option7">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option8">No. of Queues (RMQ or Cloud PubSub):</label>
+            <select id="option8">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="Tab3" class="tabcontent">
+        <h3>Define your Networking Requirements</h3>
+        <div class="form-group">
+            <label for="option9">Cloud CDN:</label>
+            <select id="option9">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option10">Cloud VPN:</label>
+            <select id="option10">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option11">Web Application Firewall:</label>
+            <select id="option11">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option12">Cloud NAT:</label>
+            <select id="option12">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option13">Cloud Loadbalancing:</label>
+            <select id="option13">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option14">DNS Entries:</label>
+            <select id="option14">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="option15">Virtual Private Cloud:</label>
+            <select id="option15">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="Tab4" class="tabcontent">
+        <h3>Define your Storage Requirements</h3>
+        <div class="form-group">
+            <label for="option16">Block Storage (No. of Provisioned Disks):</label>
+            <select id="option16">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="option17">Object Storage (No. of Buckets):</label>
+            <select id="option17">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="option18">File Storage (No. of Mounts):</label>
+            <select id="option18">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="20">Large 11 - 20</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="option19">Data to be Migrated in GB:</label>
+            <select id="option19">
+                <option value="0">0</option>
+                <option value="10">Small 1 - 10GB</option>
+                <option value="50">Medium 11 - 50GB</option>
+                <option value="100">Large 51 - 100GB</option>
+            </select>
+        </div>
+    </div>
+
+    <div id="Tab5" class="tabcontent">
+        <h3>Define any non standard requirements</h3>
+        <div class="form-group">
+            <label for="option20">No of Advanced / Non-Containerised Workloads:</label>
+            <select id="option20">
+                <option value="0">0</option>
+                <option value="5">Small 1 - 5</option>
+                <option value="10">Medium 6 - 10</option>
+                <option value="15">Large 11 - 15</option>
+            </select>
+        </div>
+    </div>
+        </div>
+
+        <div class="right-container">
+            <h2>Estimations</h2>
+            <button class="calculate-button" onclick="calculateResult()">Calculate</button>
+            <div class="result" id="result"></div>
+            <div class="result" id="basecost"></div>   
+            <div class="result" id="cost"></div>
+            <div class="result" id="totalcost"></div>
+
+        </div>
+
+        <div class="bottom-container">
+            <div class="grid-container">
+                <div class="grid-item">Project Timelines
+                    <div class="project" id="projecttimeline"></div>
+                </div>
+                <div class="grid-item">Assessment Phase
+                    <div class="project" id="assessment"></div>
+                </div>
+                <div class="grid-item">Infrastructure Deployment Phase
+                    <div class="project" id="deployment"></div>
+                </div>
+                <div class="grid-item">Workload Migration Phase
+                    <div class="project" id="migration"></div>
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
